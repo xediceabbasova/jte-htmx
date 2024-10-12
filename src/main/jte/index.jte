@@ -1,9 +1,10 @@
 @import com.khadija.tasks.Task
+@import java.util.List
 
-@param java.util.List<Task> tasks
+@param List<Task> tasks
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,7 @@
                             hx-post="/add-task"
                             hx-target="#taskTableBody"
                             hx-swap="beforeend"
-                            hx-on::after-request="this.reset()">
+                            hx-on:after-request="this.reset()">
                         <input id="newTaskInput"
                                type="text"
                                name="description"
